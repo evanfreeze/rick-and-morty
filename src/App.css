@@ -2,31 +2,38 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, 340px);
   grid-gap: 20px;
-  color: #ccc;
+  color: #444;
 }
 
 .card {
-  padding: 30px;
-  border-radius: 16px;
-  background: rgba(255,255,255,0.15);
+  padding: 10px;
+  border-radius: 8px;
+  background: #D8C89E;
 }
 
 .card-header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
+  justify-content: space-between;
 }
+
+.card-header h3 {
+  background: white;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  margin: 0;
+}
+
 
 .card h1 {
   margin: 0;
-  margin-top: 10px;
 }
 
 .card img {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
+  width: 100%;
+  border-radius: 8px 8px 0px 0px;
 }
 
 .card h2 {
@@ -35,12 +42,29 @@
 
 .card-details {
   display: grid;
+  padding: 20px 0px;
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   padding: 0px 50px;
+  background: antiquewhite;
+  border-radius: 0px 0px 8px 8px;
+  margin: 0;
+  border: 2px solid #888;
+  margin-top: -2px;
 }
 
 .card-details h2:nth-child(even) {
   justify-self: end;
   color: green;
+}
+
+.species-details {
+  background: white;
+  padding: 10px;
+  border: 4px solid #888;
+  border-radius: 3px;
+}
+
+.species-details h2 {
+  margin: 0;
 }

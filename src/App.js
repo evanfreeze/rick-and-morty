@@ -4,17 +4,24 @@ import fetch from 'node-fetch';
 
 function Card(props) {
   const { id, name, image, gender, species } = props
+  const manaCost = 3;
+  const health = 10;
+  const damage = 5;
   return (
     <div key={id} className="card">
       <div className="card-header">
-        <img src={image} alt={name}/>
         <h1>{name}</h1>
+        <h3>{manaCost}</h3>
+      </div>
+      <img src={image} alt={name}/>
+      <div className="species-details">
+        <h2>{species} ({gender})</h2>
       </div>
       <div className="card-details">
-        <h2>Gender</h2>
-        <h2>{gender}</h2>
-        <h2>Species</h2>
-        <h2>{species}</h2>
+        <h2>Damage</h2>
+        <h2>{damage}</h2>
+        <h2>Health</h2>
+        <h2>{health}</h2>
       </div>
     </div>
   )
@@ -32,7 +39,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('https://rickandmortyapi.com/api/character/')
+
+    fetch(`https://rickandmortyapi.com/api/character/?page=${Math.floor(Math.random() * 25) + 1}`)
       .then(response => response.json())
       .then(data => this.setState({
         characters: data.results,
