@@ -1,46 +1,46 @@
-.characters {
+.cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, 340px);
   grid-gap: 20px;
   color: #ccc;
 }
 
-.character {
+.card {
   padding: 30px;
   border-radius: 16px;
   background: rgba(255,255,255,0.15);
 }
 
-.character-header {
+.card-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-.character h1 {
+.card h1 {
   margin: 0;
   margin-top: 10px;
 }
 
-.character img {
+.card img {
   height: 100px;
   width: 100px;
   border-radius: 50%;
 }
 
-.character h2 {
+.card h2 {
   font-size: 1em;
 }
 
-.character-details {
+.card-details {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   padding: 0px 50px;
 }
 
-.character-details h2:nth-child(even) {
+.card-details h2:nth-child(even) {
   justify-self: end;
   color: green;
 }
